@@ -84,7 +84,7 @@
             // 
             dateTimePicker1.CalendarFont = new Font("Segoe UI", 22.2F, FontStyle.Regular, GraphicsUnit.Point);
             dateTimePicker1.Format = DateTimePickerFormat.Time;
-            dateTimePicker1.Location = new Point(416, 134);
+            dateTimePicker1.Location = new Point(582, 22);
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(146, 27);
             dateTimePicker1.TabIndex = 5;
