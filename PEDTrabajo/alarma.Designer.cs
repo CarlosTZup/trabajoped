@@ -1,6 +1,6 @@
 ﻿namespace PEDTrabajo
 {
-    partial class alarma
+    partial class Alarma
     {
         /// <summary>
         /// Required designer variable.
@@ -180,7 +180,7 @@
             label6.TabIndex = 27;
             label6.Text = "16:20";
             // 
-            // alarma
+            // Alarma
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -200,8 +200,10 @@
             Controls.Add(edadbox);
             Controls.Add(nombrebox);
             Controls.Add(label1);
-            Name = "alarma";
+            Name = "Alarma";
             Text = "alarma";
+            FormClosed += AlarmaClosed;
+            Load += Alarma_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();

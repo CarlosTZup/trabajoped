@@ -10,11 +10,22 @@ using System.Windows.Forms;
 
 namespace PEDTrabajo
 {
-    public partial class alarma : Form
+    public partial class Alarma : Form
     {
-        public alarma()
+        public Form1 form1;
+        public Alarma()
         {
             InitializeComponent();
+        }
+
+        private void Alarma_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AlarmaClosed(object sender, FormClosedEventArgs e)
+        {
+            form1.Close();
         }
     }
 }

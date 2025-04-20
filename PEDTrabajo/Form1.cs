@@ -10,7 +10,10 @@ namespace PEDTrabajo
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            Alarma Form = new Alarma();
+            Form.Show();
+            Form.form1 = this;
+            this.Hide();
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
