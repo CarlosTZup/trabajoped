@@ -31,19 +31,19 @@
             components = new System.ComponentModel.Container();
             button1 = new Button();
             panel1 = new Panel();
-            label1 = new Label();
+            button3 = new Button();
+            button2 = new Button();
             panel2 = new Panel();
-            NombreAlarma = new Label();
-            label2 = new Label();
             panel3 = new Panel();
             label3 = new Label();
+            label2 = new Label();
+            NombreAlarma = new Label();
+            label1 = new Label();
             timer1 = new System.Windows.Forms.Timer(components);
             dateTimePicker1 = new DateTimePicker();
             label4 = new Label();
             panel4 = new Panel();
-            label5 = new Label();
-            button2 = new Button();
-            button3 = new Button();
+            LabelTime = new Label();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
@@ -58,6 +58,7 @@
             button1.TabIndex = 0;
             button1.Text = "Ver Alarmas";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // panel1
             // 
@@ -72,14 +73,23 @@
             panel1.Size = new Size(333, 498);
             panel1.TabIndex = 1;
             // 
-            // label1
+            // button3
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(111, 11);
-            label1.Name = "label1";
-            label1.Size = new Size(123, 20);
-            label1.TabIndex = 1;
-            label1.Text = "Siguiente Alarma";
+            button3.Location = new Point(122, 442);
+            button3.Name = "button3";
+            button3.Size = new Size(94, 29);
+            button3.TabIndex = 4;
+            button3.Text = "Salir";
+            button3.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(105, 265);
+            button2.Name = "button2";
+            button2.Size = new Size(143, 29);
+            button2.TabIndex = 3;
+            button2.Text = "Configurar Hora";
+            button2.UseVisualStyleBackColor = true;
             // 
             // panel2
             // 
@@ -91,24 +101,6 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(291, 128);
             panel2.TabIndex = 2;
-            // 
-            // NombreAlarma
-            // 
-            NombreAlarma.AutoSize = true;
-            NombreAlarma.Location = new Point(95, 9);
-            NombreAlarma.Name = "NombreAlarma";
-            NombreAlarma.Size = new Size(112, 20);
-            NombreAlarma.TabIndex = 0;
-            NombreAlarma.Text = "NombreAlarma";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(17, 60);
-            label2.Name = "label2";
-            label2.Size = new Size(42, 20);
-            label2.TabIndex = 1;
-            label2.Text = "Hora";
             // 
             // panel3
             // 
@@ -129,6 +121,33 @@
             label3.TabIndex = 0;
             label3.Text = "16:30";
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(17, 60);
+            label2.Name = "label2";
+            label2.Size = new Size(42, 20);
+            label2.TabIndex = 1;
+            label2.Text = "Hora";
+            // 
+            // NombreAlarma
+            // 
+            NombreAlarma.AutoSize = true;
+            NombreAlarma.Location = new Point(95, 9);
+            NombreAlarma.Name = "NombreAlarma";
+            NombreAlarma.Size = new Size(112, 20);
+            NombreAlarma.TabIndex = 0;
+            NombreAlarma.Text = "NombreAlarma";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(111, 11);
+            label1.Name = "label1";
+            label1.Size = new Size(123, 20);
+            label1.TabIndex = 1;
+            label1.Text = "Siguiente Alarma";
+            // 
             // dateTimePicker1
             // 
             dateTimePicker1.Enabled = false;
@@ -136,6 +155,7 @@
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(250, 27);
             dateTimePicker1.TabIndex = 2;
+            dateTimePicker1.ValueChanged += dateTimePicker1_ValueChanged;
             // 
             // label4
             // 
@@ -149,39 +169,21 @@
             // panel4
             // 
             panel4.BackColor = Color.WhiteSmoke;
-            panel4.Controls.Add(label5);
+            panel4.Controls.Add(LabelTime);
             panel4.Location = new Point(44, 113);
             panel4.Name = "panel4";
             panel4.Size = new Size(693, 314);
             panel4.TabIndex = 4;
             // 
-            // label5
+            // LabelTime
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Consolas", 72F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(138, 74);
-            label5.Name = "label5";
-            label5.Size = new Size(389, 140);
-            label5.TabIndex = 0;
-            label5.Text = "16:20";
-            // 
-            // button2
-            // 
-            button2.Location = new Point(105, 265);
-            button2.Name = "button2";
-            button2.Size = new Size(143, 29);
-            button2.TabIndex = 3;
-            button2.Text = "Configurar Hora";
-            button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            button3.Location = new Point(122, 442);
-            button3.Name = "button3";
-            button3.Size = new Size(94, 29);
-            button3.TabIndex = 4;
-            button3.Text = "Salir";
-            button3.UseVisualStyleBackColor = true;
+            LabelTime.AutoSize = true;
+            LabelTime.Font = new Font("Consolas", 48F, FontStyle.Regular, GraphicsUnit.Point);
+            LabelTime.Location = new Point(96, 99);
+            LabelTime.Name = "LabelTime";
+            LabelTime.Size = new Size(260, 94);
+            LabelTime.TabIndex = 0;
+            LabelTime.Text = "16:20";
             // 
             // Form1
             // 
@@ -223,6 +225,6 @@
         private Panel panel4;
         private Button button3;
         private Button button2;
-        private Label label5;
+        private Label LabelTime;
     }
 }

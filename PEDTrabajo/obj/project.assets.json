@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\carlo\\source\\repos\\udbpre\\PEDDES\\Ped_trabajo\\PEDTrabajo\\PEDTrabajo\\PEDTrabajo.csproj",
+      "projectUniqueName": "C:\\Users\\carlo\\source\\repos\\udbpre\\PEDDES\\Ped_trabajo\\PEDTrabajo\\trabajoped\\PEDTrabajo\\PEDTrabajo.csproj",
       "projectName": "PEDTrabajo",
-      "projectPath": "C:\\Users\\carlo\\source\\repos\\udbpre\\PEDDES\\Ped_trabajo\\PEDTrabajo\\PEDTrabajo\\PEDTrabajo.csproj",
+      "projectPath": "C:\\Users\\carlo\\source\\repos\\udbpre\\PEDDES\\Ped_trabajo\\PEDTrabajo\\trabajoped\\PEDTrabajo\\PEDTrabajo.csproj",
       "packagesPath": "C:\\Users\\carlo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\carlo\\source\\repos\\udbpre\\PEDDES\\Ped_trabajo\\PEDTrabajo\\PEDTrabajo\\obj\\",
+      "outputPath": "C:\\Users\\carlo\\source\\repos\\udbpre\\PEDDES\\Ped_trabajo\\PEDTrabajo\\trabajoped\\PEDTrabajo\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
