@@ -35,7 +35,7 @@
             button2 = new Button();
             panel2 = new Panel();
             panel3 = new Panel();
-            label3 = new Label();
+            LabelNextAlarm = new Label();
             label2 = new Label();
             NombreAlarma = new Label();
             label1 = new Label();
@@ -105,21 +105,21 @@
             // panel3
             // 
             panel3.BackColor = Color.DarkSalmon;
-            panel3.Controls.Add(label3);
+            panel3.Controls.Add(LabelNextAlarm);
             panel3.Location = new Point(78, 44);
             panel3.Name = "panel3";
             panel3.Size = new Size(204, 76);
             panel3.TabIndex = 2;
             // 
-            // label3
+            // LabelNextAlarm
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Sitka Banner", 25.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(44, 4);
-            label3.Name = "label3";
-            label3.Size = new Size(116, 62);
-            label3.TabIndex = 0;
-            label3.Text = "16:30";
+            LabelNextAlarm.AutoSize = true;
+            LabelNextAlarm.Font = new Font("Sitka Banner", 25.8F, FontStyle.Regular, GraphicsUnit.Point);
+            LabelNextAlarm.Location = new Point(44, 4);
+            LabelNextAlarm.Name = "LabelNextAlarm";
+            LabelNextAlarm.Size = new Size(116, 62);
+            LabelNextAlarm.TabIndex = 0;
+            LabelNextAlarm.Text = "16:30";
             // 
             // label2
             // 
@@ -147,6 +147,12 @@
             label1.Size = new Size(123, 20);
             label1.TabIndex = 1;
             label1.Text = "Siguiente Alarma";
+            // 
+            // timer1
+            // 
+            timer1.Enabled = true;
+            timer1.Interval = 1000;
+            timer1.Tick += timer1_Tick;
             // 
             // dateTimePicker1
             // 
@@ -197,6 +203,7 @@
             Controls.Add(panel1);
             Name = "Form1";
             Text = "Form1";
+            FormClosed += Form1Closed;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
@@ -216,7 +223,7 @@
         private Label label1;
         private Panel panel2;
         private Panel panel3;
-        private Label label3;
+        private Label LabelNextAlarm;
         private Label label2;
         private Label NombreAlarma;
         private System.Windows.Forms.Timer timer1;

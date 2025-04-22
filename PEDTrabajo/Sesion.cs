@@ -30,7 +30,8 @@ namespace PEDTrabajo
                     MessageBox.Show("¡ BIENVENIDO/A !");
                     Ingresar = new Form1();
                     Ingresar.Show();
-                    this.Close();
+                    Ingresar.Sesion = this;
+                    this.Hide();
 
                 }
                 else

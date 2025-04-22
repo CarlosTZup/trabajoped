@@ -39,12 +39,12 @@
             label3 = new Label();
             label2 = new Label();
             label4 = new Label();
-            edadbox = new TextBox();
+            tiempobox = new TextBox();
             nombrebox = new TextBox();
             timer1 = new System.Windows.Forms.Timer(components);
             checkedListBox1 = new CheckedListBox();
             label5 = new Label();
-            label6 = new Label();
+            LabelClock = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -65,6 +65,7 @@
             button4.TabIndex = 24;
             button4.Text = "Eliminar";
             button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // button3
             // 
@@ -74,6 +75,7 @@
             button3.TabIndex = 23;
             button3.Text = "Buscar";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // button2
             // 
@@ -83,6 +85,7 @@
             button2.TabIndex = 22;
             button2.Text = "Editar";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // dataGridView1
             // 
@@ -102,6 +105,7 @@
             button5.TabIndex = 20;
             button5.Text = "Agregar";
             button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
             // 
             // idbox
             // 
@@ -137,12 +141,12 @@
             label4.TabIndex = 16;
             label4.Text = "Nombre";
             // 
-            // edadbox
+            // tiempobox
             // 
-            edadbox.Location = new Point(102, 227);
-            edadbox.Name = "edadbox";
-            edadbox.Size = new Size(125, 27);
-            edadbox.TabIndex = 15;
+            tiempobox.Location = new Point(102, 227);
+            tiempobox.Name = "tiempobox";
+            tiempobox.Size = new Size(125, 27);
+            tiempobox.TabIndex = 15;
             // 
             // nombrebox
             // 
@@ -150,6 +154,12 @@
             nombrebox.Name = "nombrebox";
             nombrebox.Size = new Size(125, 27);
             nombrebox.TabIndex = 14;
+            // 
+            // timer1
+            // 
+            timer1.Enabled = true;
+            timer1.Interval = 1000;
+            timer1.Tick += timer1_Tick;
             // 
             // checkedListBox1
             // 
@@ -169,23 +179,23 @@
             label5.TabIndex = 26;
             label5.Text = "Fecha";
             // 
-            // label6
+            // LabelClock
             // 
-            label6.AutoSize = true;
-            label6.BackColor = SystemColors.ControlLightLight;
-            label6.Font = new Font("Consolas", 25.8000011F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.Location = new Point(675, 32);
-            label6.Name = "label6";
-            label6.Size = new Size(142, 51);
-            label6.TabIndex = 27;
-            label6.Text = "16:20";
+            LabelClock.AutoSize = true;
+            LabelClock.BackColor = SystemColors.ControlLightLight;
+            LabelClock.Font = new Font("Consolas", 25.8000011F, FontStyle.Regular, GraphicsUnit.Point);
+            LabelClock.Location = new Point(675, 32);
+            LabelClock.Name = "LabelClock";
+            LabelClock.Size = new Size(142, 51);
+            LabelClock.TabIndex = 27;
+            LabelClock.Text = "16:20";
             // 
             // Alarma
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1143, 494);
-            Controls.Add(label6);
+            Controls.Add(LabelClock);
             Controls.Add(label5);
             Controls.Add(checkedListBox1);
             Controls.Add(button4);
@@ -197,7 +207,7 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label4);
-            Controls.Add(edadbox);
+            Controls.Add(tiempobox);
             Controls.Add(nombrebox);
             Controls.Add(label1);
             Name = "Alarma";
@@ -221,11 +231,11 @@
         private Label label3;
         private Label label2;
         private Label label4;
-        private TextBox edadbox;
+        private TextBox tiempobox;
         private TextBox nombrebox;
         private System.Windows.Forms.Timer timer1;
         private CheckedListBox checkedListBox1;
         private Label label5;
-        private Label label6;
+        private Label LabelClock;
     }
 }
