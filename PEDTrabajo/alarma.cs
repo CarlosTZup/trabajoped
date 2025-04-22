@@ -14,6 +14,7 @@ namespace PEDTrabajo
     {
         public Form1 form1;
         public DateTime Clock;
+        public bool intended=false;
 
         public Alarma()
         {
@@ -29,11 +30,13 @@ namespace PEDTrabajo
 
         private void AlarmaClosed(object sender, FormClosedEventArgs e)
         {
+            if (!intended)
             form1.Close();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+            LabelClock.Text = Clock.ToString("hh:mm");
             Clock = Clock.AddSeconds(1);
         }
 
@@ -264,7 +267,14 @@ namespace PEDTrabajo
             {
                 MessageBox.Show("Rellene el campo ID.");
             }
-        
+
+        }
+
+        private void buttonregresar_Click(object sender, EventArgs e)
+        {
+            intended = true;
+            form1.Show();
+            this.Close();
         }
     }
 }

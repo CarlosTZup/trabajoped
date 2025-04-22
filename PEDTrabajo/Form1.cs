@@ -12,7 +12,7 @@ namespace PEDTrabajo
             InitializeComponent();
             LabelTime.Text = dateTimePicker1.Value.ToString("hh:mm:ss tt");
             alarm = dateTimePicker1.Value;
-            alarm = alarm.AddMinutes(0);
+            alarm = alarm.AddMinutes(2);
             LabelNextAlarm.Text = alarm.ToString("hh:mm");
         }
 
@@ -39,7 +39,7 @@ namespace PEDTrabajo
             {
                 validate = true;
                 MessageBox.Show("¡ Alarma Activada !");
-                   
+
             }
             else if (!(alarm.ToString("hh:mm") == dateTimePicker1.Value.ToString("hh:mm")))
                 validate = false;
@@ -48,6 +48,21 @@ namespace PEDTrabajo
         private void Form1Closed(object sender, FormClosedEventArgs e)
         {
             Sesion.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            HoraConfigurar Form = new HoraConfigurar();
+            Form.Show();
+            Form.form1 = this;
+            Form.Clock = dateTimePicker1.Value;
+            Form.sent = true;
+            this.Hide();
+        }
+
+        public void CambiarHora(DateTime bGClock)
+        {
+             dateTimePicker1.Value = bGClock;
         }
     }
 }

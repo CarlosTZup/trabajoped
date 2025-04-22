@@ -36,6 +36,8 @@
             button1 = new Button();
             timer1 = new System.Windows.Forms.Timer(components);
             dateTimePicker1 = new DateTimePicker();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // textBox1
@@ -89,11 +91,23 @@
             dateTimePicker1.Size = new Size(146, 27);
             dateTimePicker1.TabIndex = 5;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.BackgroundImage = Properties.Resources.Reloj;
+            pictureBox1.Image = Properties.Resources.Reloj;
+            pictureBox1.Location = new Point(491, 74);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(455, 333);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 6;
+            pictureBox1.TabStop = false;
+            // 
             // Sesion
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1032, 450);
+            Controls.Add(pictureBox1);
             Controls.Add(dateTimePicker1);
             Controls.Add(button1);
             Controls.Add(label2);
@@ -102,6 +116,7 @@
             Controls.Add(textBox1);
             Name = "Sesion";
             Text = "Sesion";
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -115,5 +130,6 @@
         private Button button1;
         private System.Windows.Forms.Timer timer1;
         private DateTimePicker dateTimePicker1;
+        private PictureBox pictureBox1;
     }
 }

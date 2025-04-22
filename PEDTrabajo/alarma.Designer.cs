@@ -45,6 +45,7 @@
             checkedListBox1 = new CheckedListBox();
             label5 = new Label();
             LabelClock = new Label();
+            buttonregresar = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -190,11 +191,22 @@
             LabelClock.TabIndex = 27;
             LabelClock.Text = "16:20";
             // 
+            // buttonregresar
+            // 
+            buttonregresar.Location = new Point(999, 32);
+            buttonregresar.Name = "buttonregresar";
+            buttonregresar.Size = new Size(94, 29);
+            buttonregresar.TabIndex = 28;
+            buttonregresar.Text = "Regresar";
+            buttonregresar.UseVisualStyleBackColor = true;
+            buttonregresar.Click += buttonregresar_Click;
+            // 
             // Alarma
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1143, 494);
+            Controls.Add(buttonregresar);
             Controls.Add(LabelClock);
             Controls.Add(label5);
             Controls.Add(checkedListBox1);
@@ -237,5 +249,6 @@
         private CheckedListBox checkedListBox1;
         private Label label5;
         private Label LabelClock;
+        private Button buttonregresar;
     }
 }
